@@ -21,7 +21,8 @@
  $inc = get_stylesheet_directory() . '/inc';
  $includes = [
 	'enqueue.php',
-	'function-child.php'
+	'function-child.php',
+	'customizer.php'
  ];
 
  foreach( $includes as $include ) {

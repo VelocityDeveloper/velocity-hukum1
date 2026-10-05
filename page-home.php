@@ -11,32 +11,32 @@
 
 get_header();
 
-$hero_image      = velocitytheme_option('hero_gambar');
-$hero_slogan     = velocitytheme_option('hero_slogan', get_bloginfo('description')); // Fallback to tagline
-$hero_title      = velocitytheme_option('hero_judul', get_bloginfo('name')); // Fallback to site title
-$hero_desc       = velocitytheme_option('hero_deskripsi');
+$hero_image      = velocity_hukum1_gambar('hero_gambar');
+$hero_slogan     = velocity_hukum1_mod('hero_slogan');
+$hero_title      = velocity_hukum1_mod('hero_judul');
+$hero_desc       = velocity_hukum1_mod('hero_deskripsi');
 
-$judul_keunggulan = velocitytheme_option('judul_keunggulan');
-$keunggulan = velocitytheme_option('keunggulan_items');
-$home_judul_galeri = velocitytheme_option('home_judul_galeri');
-$home_galeri = velocitytheme_option('home_galeri');
+$judul_keunggulan = velocity_hukum1_mod('judul_keunggulan');
+$keunggulan = velocity_hukum1_daftar('keunggulan_items');
+$home_judul_galeri = velocity_hukum1_mod('home_judul_galeri');
+$home_galeri = velocity_hukum1_mod('home_galeri');
 
-$judul_layanan    = velocitytheme_option('judul_layanan');
-$layanan_items    = velocitytheme_option('layanan_items', []);
-$link_layanan     = velocitytheme_option('link_layanan');
-$teks_link_layanan= velocitytheme_option('teks_link_layanan');
+$judul_layanan    = velocity_hukum1_mod('judul_layanan');
+$layanan_items    = velocity_hukum1_daftar('layanan_items');
+$link_layanan     = velocity_hukum1_mod('link_layanan');
+$teks_link_layanan= velocity_hukum1_mod('teks_link_layanan');
 
 
-$judul_konsultasi1 = velocitytheme_option('judul_konsultasi1', 'Konsultasi Online');
-$gambar_konsultasi1 = velocitytheme_option('gambar_konsultasi1');
-$ket_konsultasi1   = velocitytheme_option('ket_konsultasi1');
+$judul_konsultasi1 = velocity_hukum1_mod('judul_konsultasi1');
+$gambar_konsultasi1 = velocity_hukum1_gambar('gambar_konsultasi1');
+$ket_konsultasi1   = velocity_hukum1_mod('ket_konsultasi1');
 
-$judul_konsultasi2 = velocitytheme_option('judul_konsultasi2', 'Konsultasi Tatap Muka');
-$gambar_konsultasi2 = velocitytheme_option('gambar_konsultasi2');
-$ket_konsultasi2   = velocitytheme_option('ket_konsultasi2');
+$judul_konsultasi2 = velocity_hukum1_mod('judul_konsultasi2');
+$gambar_konsultasi2 = velocity_hukum1_gambar('gambar_konsultasi2');
+$ket_konsultasi2   = velocity_hukum1_mod('ket_konsultasi2');
 
-$wa_konsultasi     = velocitytheme_option('wa_konsultasi');
-$teks_tombol_konsultasi = velocitytheme_option('teks_tombol_konsultasi', 'Konsultasi Sekarang');
+$wa_konsultasi     = velocity_hukum1_mod('wa_konsultasi');
+$teks_tombol_konsultasi = velocity_hukum1_mod('teks_tombol_konsultasi');
 ?>
 
 <div class="wrapper" id="page-wrapper">
@@ -178,7 +178,7 @@ $teks_tombol_konsultasi = velocitytheme_option('teks_tombol_konsultasi', 'Konsul
         <?php endif; ?>
         <h4 class="text-center fs-4 fw-bold mb-3"><?php echo esc_html($judul_konsultasi1); ?></h4>
         <div class="text-muted velocity-content">
-          <?php echo wp_kses_post($ket_konsultasi1); ?>
+          <?php echo wpautop(wp_kses_post($ket_konsultasi1)); ?>
         </div>
       </div>
       </div>
@@ -191,7 +191,7 @@ $teks_tombol_konsultasi = velocitytheme_option('teks_tombol_konsultasi', 'Konsul
         <?php endif; ?>
         <h4 class="text-center fs-4 fw-bold mb-3"><?php echo esc_html($judul_konsultasi2); ?></h4>
         <div class="text-muted velocity-content">
-          <?php echo wp_kses_post($ket_konsultasi2); ?>
+          <?php echo wpautop(wp_kses_post($ket_konsultasi2)); ?>
         </div>
       </div>
       </div>
